@@ -3,16 +3,15 @@ package com.driver.ui.controller;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.driver.Converter.FoodConverter;
-import com.driver.io.entity.FoodEntity;
+
+
 import com.driver.io.repository.FoodRepository;
 import com.driver.model.request.FoodDetailsRequestModel;
 import com.driver.model.response.FoodDetailsResponse;
 import com.driver.model.response.OperationStatusModel;
-import com.driver.model.response.RequestOperationName;
-import com.driver.model.response.RequestOperationStatus;
+
 import com.driver.service.FoodService;
-import com.driver.shared.dto.FoodDto;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -34,18 +33,15 @@ public class FoodController {
 	FoodRepository foodRepository;
 	@GetMapping(path="/{id}")
 	public FoodDetailsResponse getFood(@PathVariable String id) throws Exception{
-		foodService.getFoodById(id);
+
 		return null;
 	}
 
 	@PostMapping("/create")
 	public FoodDetailsResponse createFood(@RequestBody FoodDetailsRequestModel foodDetails) {
 
-		FoodEntity foodEntity = FoodConverter.requestToEntity(foodDetails);
-		foodRepository.save(foodEntity);
-		FoodEntity newFood = foodRepository.findByFoodName(foodDetails.getFoodName());
-		FoodDetailsResponse response = FoodConverter.entityToResponse(newFood);
-		return response;
+
+		return null;
 	}
 
 	@PutMapping(path="/{id}")
