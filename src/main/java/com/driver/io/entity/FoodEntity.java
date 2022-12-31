@@ -12,8 +12,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity(name = "foods")
-@NoArgsConstructor
-@AllArgsConstructor
 @Builder
 public class FoodEntity{
 	@Id
