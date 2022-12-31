@@ -13,6 +13,7 @@ import javax.persistence.Id;
 
 @Entity(name = "foods")
 @NoArgsConstructor
+@AllArgsConstructor
 public class FoodEntity{
 	@Id
 	@GeneratedValue
